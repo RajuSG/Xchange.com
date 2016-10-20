@@ -94,10 +94,10 @@ a {
 
 .webdesigntuts-workshop {
     background: #151515;
-    height: 100%;
+    height: 50%;
  /*  position: absolute;*/
     text-align: left;
-    width: 100%;
+    width:130%;
 }
 
 .webdesigntuts-workshop:before,
@@ -106,9 +106,9 @@ a {
     display: block;
     height: 1px;
     left: 50%;
-    margin: 0 0 0 -400px;
+    margin: 0 0 0 -200px;
    position: absolute;
-    width: 800px;
+    width: 400px;
 }
 
 .webdesigntuts-workshop:before {
@@ -125,13 +125,13 @@ a {
 
 .webdesigntuts-workshop form {
     background: #111;
-    background: linear-gradient(#1b1b1b, #111);
+  /*  background: linear-gradient(#1b1b1b, #111);*/
     border: 1px solid #000;
     border-radius: 5px;
     box-shadow: inset 0 0 0 1px #272727;
-    display: inline-block;
+    /*display: inline-block; */
     font-size: 0px;
-    margin: 150px auto 0;
+    margin: 0px auto 0;
     padding: 20px;
     position: relative;
     z-index: 1;
@@ -144,7 +144,7 @@ a {
     border-radius: 5px 0 0 5px;
     box-shadow: 0 2px 0 #000;
     color: #888;
-    display: block;
+    /*display: block;*/
     float: left;
     font-family: 'Cabin', helvetica, arial, sans-serif;
     font-size: 13px;

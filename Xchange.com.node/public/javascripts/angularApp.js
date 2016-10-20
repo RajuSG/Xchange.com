@@ -78,11 +78,12 @@ angular.module('myApp',['ui.router'] )
         });
     };
 
-    o.getAllByISBN = function(findISBN) {
+    o.getAllByISBN = function(searchBy , findText) {
         return $http({
-            url: '/search/byISBN',
+            url: '/search',
             method: "GET",
-            params: {findISBN: findISBN}
+            params: { searchBy: searchBy,
+                      findText: findText}
         }).success(function(data){
             angular.copy(data, o.posts);
         });
@@ -242,12 +243,12 @@ angular.module('myApp',['ui.router'] )
                 }
             })
             .state('search', {
-                url: '/search/byISBN?findISBN',
+                url: '/search?findText&searchBy',
                 templateUrl: '/search.html',
                 controller: 'MainCtrl',
                 resolve: {
                     postPromise: ['$stateParams','posts', function($stateParams ,posts){
-                        return posts.getAllByISBN($stateParams.findISBN);
+                        return posts.getAllByISBN($stateParams.searchBy ,$stateParams.findText );
                     }]
                 }
             })

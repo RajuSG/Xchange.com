@@ -63,12 +63,15 @@ router.get('/posts/:post', function(req, res, next) {
     });
 });
 
-router.get('/search/byISBN', function(req, res, next) {
-    console.log("finding value of ISBN" + req.query.findISBN);
-    Post.find({ "ISBN" : { $regex : req.query.findISBN } } ,function(err, posts){
+router.get('/search', function(req, res, next) {
+    console.log("finding value of ISBN" + req.query.findText);
+    var vSearchBy = '"'+req.query.searchBy+'"';
+
+    console.log("searchy By"+ "vSearchBy");
+    Post.find({ "ISBN" : { $regex : req.query.findText } } ,function(err, posts){
         console.log('ISBN results' + posts )
         if(err){
-            console.log('ISBN results' + posts )
+            console.log('ISBN Error results' + posts )
            return next(err);
         }
         res.json(posts);
