@@ -106,7 +106,7 @@ a {
     display: block;
     height: 1px;
     left: 50%;
-    margin: 0 0 0 -200px;
+    margin: 0 0 0 -0px;
    position: absolute;
     width: 400px;
 }
@@ -132,7 +132,7 @@ a {
     /*display: inline-block; */
     font-size: 0px;
     margin: 0px auto 0;
-    padding: 20px;
+    padding: 0px;
     position: relative;
     z-index: 1;
 }
@@ -233,4 +233,27 @@ a {
         border-color: #6f6;
         box-shadow: 0 0 20px rgba(0,255,0,.6), inset 0 0 10px rgba(0,255,0,.4), 0 2px 0 #000;
     }
+}
+
+
+.chart {
+    background: #eee;
+    padding: 3px;
+}
+
+.chart div {
+    width: 0;
+    transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+}
+
+.chart div {
+    font: 10px sans-serif;
+    background-color: steelblue;
+    text-align: right;
+    padding: 3px;
+    margin: 5px;
+    color: white;
+    box-shadow: 2px 2px 2px #666;
 }
